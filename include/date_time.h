@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdint.h>
 // typedef union {
 //     uint16_t raw;
@@ -60,3 +64,7 @@ int set_date(Date_time* dt, Date date);
 Month get_month(Date_time* dt);
 Date get_date(Date_time* date_time);
 Time get_time(Date_time* date_time);
+
+#ifdef __cplusplus
+}
+#endif

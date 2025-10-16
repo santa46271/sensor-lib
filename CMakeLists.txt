@@ -5,13 +5,20 @@ project(sensor-lib LANGUAGES C)
 add_library(sensor-lib STATIC
             src/sensor_data.c
             src/date_time.c
+            src/gsm7.c
             include/sensor_data.h
-            include/date_time.h)
+            include/date_time.h
+            include/gsm7_table.h
+            include/gsm7_table.h)
 
 target_include_directories(sensor-lib PUBLIC include)
 
-add_executable(test src/test.c)
-target_link_libraries(test PRIVATE sensor-lib)
+# add_executable(test_meas src/test.c)
+# target_link_libraries(test_meas PRIVATE sensor-lib)
+# add_executable(test_dt src/test1.c)
+# target_link_libraries(test_dt PRIVATE sensor-lib)
+# add_executable(test_hex src/test_hex.c)
+# target_link_libraries(test_hex PRIVATE sensor-lib)
 
 if(CMAKE_SYSTEM_NAME MATCHES "Generic")
     message(STATUS "Building for embedded system")
