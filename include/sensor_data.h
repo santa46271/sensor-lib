@@ -1,7 +1,7 @@
 #pragma once
 
 #ifdef __cplusplus
-extern "C"
+extern "C" {
 #endif
 
 #include <stdint.h>
@@ -11,7 +11,6 @@ extern "C"
 #define HOURS 24
 #define MEASUREMENTS_HOUR 4
 #define SIZE_BUF_MEASUREMENTS (MEASUREMENTS_HOUR * HOURS)
-
 
 typedef struct Sensor_data {
     Date_time dt;
@@ -26,8 +25,8 @@ typedef struct Measurements{
     int cur_index;
 } Measurements;
 
-void init_measurements(Measurements* meas);
-void init_sensor_data(Sensor_data* data);
+void measurements_init(Measurements* meas);
+void sensor_data_init(Sensor_data* data);
 void measurements_add_sensor_data(Measurements* meas, const Sensor_data* data);
 void clear(Measurements* meas);
 

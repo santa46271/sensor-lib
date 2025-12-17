@@ -1,11 +1,11 @@
 #include "sensor_data.h"
 
-void init_measurements(Measurements* meas) {
+void measurements_init(Measurements* meas) {
     if (!meas) return;
     meas->cur_index = 0;
 }
 
-void init_sensor_data(Sensor_data* data) {
+void sensor_data_init(Sensor_data* data) {
     if (!data) return;
     data->dt = 0;
     data->room1 = 0;

@@ -6,10 +6,12 @@ add_library(sensor-lib STATIC
             src/sensor_data.c
             src/date_time.c
             src/gsm7.c
+            src/hex_format.c
             include/sensor_data.h
             include/date_time.h
             include/gsm7_table.h
-            include/gsm7_table.h)
+            include/hex_format.h
+)
 
 target_include_directories(sensor-lib PUBLIC include)
 
